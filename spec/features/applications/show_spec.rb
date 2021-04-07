@@ -41,4 +41,12 @@ RSpec.describe "the Application show page" do
 
     expect(page).to have_content(@pet_1.name)
   end
+
+  it "Fill in search bar and expect to see all pets with partial or full matches, case insensitive" do
+    visit "/applications/#{@application.id}"
+
+    fill_in "Search by Pet name", with: "co"
+
+    expect(page).to have_content(@pet_1.name)
+  end
 end
