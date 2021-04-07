@@ -30,7 +30,7 @@ pet_10 = Pet.create(adoptable: true, age: 5, breed: 'Maine Coon', name: 'Llewell
 pet_11 = Pet.create(adoptable: true, age: 7, breed: 'Tabby', name: 'Siobhan', shelter_id: shelter_2.id)
 
 application_1 = Application.create!(name: "Yasser Seirawan", address: "742 Evergreen Terrace", city: "Springfield", state: "OR", zip_code: 97205, description: "Looking for a lockdown companion", status: "In progress")
-application_2 = Application.create!(name: "Bent Larson", address: "1138 Memory Lane", city: "Aurora", state: "CO", zip_code: 20165, description: "I want to adopt one new cat every year", status: "In progress")
+application_2 = Application.create!(name: "Bent Larsen", address: "1138 Memory Lane", city: "Aurora", state: "CO", zip_code: 20165, description: "I want to adopt one new cat every year", status: "In progress")
 PetApplication.create!(application: application_1, pet: pet_1)
 PetApplication.create!(application: application_2, pet: pet_2)
 
