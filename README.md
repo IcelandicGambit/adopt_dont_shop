@@ -168,7 +168,7 @@ And I do not see a section to add more pets to this application
 ```
 
 ```
-[ ] done
+[ x] done
 
 No Pets on an Application
 
