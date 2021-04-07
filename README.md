@@ -183,7 +183,7 @@ Then I do not see a section to submit my application
 These stories emphasize key database concepts
 
 ```
-[ ] done
+[ x] done
 
 Partial Matches for Pet Names
 
