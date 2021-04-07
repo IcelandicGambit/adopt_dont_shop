@@ -21,9 +21,16 @@ pet_1 = Pet.create(adoptable: true, age: 1, breed: 'Russian Blue', name: 'Cowboy
 pet_2 = Pet.create(adoptable: true, age: 1, breed: 'Sphynx', name: 'Ceri', shelter_id: shelter_1.id)
 pet_3 = Pet.create(adoptable: true, age: 3, breed: 'Doberman', name: 'Carwyn', shelter_id: shelter_2.id)
 pet_4 = Pet.create(adoptable: true, age: 15, breed: 'Chow Golden Retriever mix', name: 'Zeus', shelter_id: shelter_2.id)
+pet_5 = Pet.create(adoptable: true, age: 1, breed: 'Unknown', name: 'White Monster Ultra', shelter_id: shelter_1.id)
+pet_6 = Pet.create(adoptable: true, age: 4, breed: 'French Bulldog', name: 'George', shelter_id: shelter_1.id)
+pet_7 = Pet.create(adoptable: true, age: 6, breed: 'Yellow Lab', name: 'Tug Boat', shelter_id: shelter_2.id)
+pet_8 = Pet.create(adoptable: true, age: 5, breed: 'Pixie Bob', name: 'Mercy', shelter_id: shelter_1.id)
+pet_9 = Pet.create(adoptable: true, age: 3, breed: 'Greyhound', name: 'Gwion', shelter_id: shelter_1.id)
+pet_10 = Pet.create(adoptable: true, age: 5, breed: 'Maine Coon', name: 'Llewellyn', shelter_id: shelter_2.id)
+pet_11 = Pet.create(adoptable: true, age: 7, breed: 'Tabby', name: 'Siobhan', shelter_id: shelter_2.id)
 
-application_1 = Application.create!(name: "Alan Smithee", address: "742 Evergreen Terrace", city: "Springfield", state: "OR", zip_code: 97205, description: "Looking for a lockdown companion", status: "In progress")
-application_2 = Application.create!(name: "JoAnna Brownrigg", address: "1138 Memory Lane", city: "Aurora", state: "CO", zip_code: 20165, description: "I want to adopt one new cat every year", status: "In progress")
+application_1 = Application.create!(name: "Yasser Seirawan", address: "742 Evergreen Terrace", city: "Springfield", state: "OR", zip_code: 97205, description: "Looking for a lockdown companion", status: "In progress")
+application_2 = Application.create!(name: "Bent Larson", address: "1138 Memory Lane", city: "Aurora", state: "CO", zip_code: 20165, description: "I want to adopt one new cat every year", status: "In progress")
 PetApplication.create!(application: application_1, pet: pet_1)
 PetApplication.create!(application: application_2, pet: pet_2)
 
@@ -31,9 +38,9 @@ vet_1 = VeterinaryOffice.create!(name: 'Frontier Veterinary Clinic', boarding_se
 vet_2 = VeterinaryOffice.create!(name: 'Country Vet', boarding_services: true, max_patient_capacity: 15)
 
 vet_1.veterinarians.create!(name: 'Adam', review_rating: 10, on_call: true)
-vet_1.veterinarians.create!(name: 'Gwion', review_rating: 7, on_call: true)
-vet_1.veterinarians.create!(name: 'Llewellyn', review_rating: 10, on_call: true)
-vet_1.veterinarians.create!(name: 'Sioned', review_rating: 8, on_call: false)
+vet_1.veterinarians.create!(name: 'Matt', review_rating: 7, on_call: true)
+vet_1.veterinarians.create!(name: 'Kevin', review_rating: 10, on_call: true)
+vet_1.veterinarians.create!(name: 'Janet', review_rating: 8, on_call: false)
 
 vet_2.veterinarians.create!(name: 'Dylan', review_rating: 5, on_call: false)
 vet_2.veterinarians.create!(name: 'Rhys', review_rating: 4, on_call: true)
