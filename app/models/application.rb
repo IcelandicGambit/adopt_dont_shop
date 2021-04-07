@@ -7,9 +7,13 @@ class Application < ApplicationRecord
   validates :city, presence: true
   validates :state, presence: true
   validates :zip_code, presence: true
-  validates :description, presence: true
+  validates :description, presence: true, allow_nil: true
 
   def set_in_progress
-    self.status = "In Progress" #self might be redundant
+    self.status = "In Progress" 
+  end
+
+  def set_pending
+    self.status = "Pending"
   end
 end
