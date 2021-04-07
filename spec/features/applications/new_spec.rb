@@ -10,6 +10,5 @@ RSpec.describe 'applications new page' do
     expect(page).to have_content("City can't be blank")
     expect(page).to have_content("State can't be blank")
     expect(page).to have_content("Zip code can't be blank")
-    expect(page).to have_content("Description can't be blank")
   end
 end

@@ -32,9 +32,16 @@ class ApplicationsController < ApplicationController
 
   def update
     @application = Application.find(params[:id])
-    @application.update(application_params)
     if params[:pet_id].present?
+      @application.update(application_params)
       @application.pet_applications.create(pet_id: params[:pet_id])
+    else
+      if params[:description].blank?
+        flash[:error] = "You must enter a description"
+      else
+        @application.set_pending
+        @application.update(application_params)
+      end
     end
     redirect_to "/applications/#{@application.id}"
   end

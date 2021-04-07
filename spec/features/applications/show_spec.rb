@@ -21,22 +21,24 @@ RSpec.describe "the Application show page" do
     expect(page).to have_content(@pet_2.name)
   end
 
-  it "When I visit an application's show page I see a button to 'Add a Pet to this
-    Application." do
+  it "When I visit an application's show page I see a button to search." do
+    visit "/applications/#{@application.id}"
 
-     expect(page).to have_content("Add a Pet to this Application")
+     expect(page).to have_button("Search")
   end
 
-   it 'has a text box where I can search for pets by name' do
+   it "When I visit an application's show page I see a button to submit application." do
+    visit "/applications/#{@application.id}"
 
-    expect(page).to have_button("Search by Pet name")
+     expect(page).to have_button("Submit this application")
   end
 
   it "Fill in search bar and expect to see all pets with partial or full matches" do
+    visit "/applications/#{@application.id}"
 
-   fill_in "Search by Pet name", with: "Co"
-   click_on("Search by Pet name")
+    fill_in "Search by Pet name", with: "Co"
+    click_on("Search")
 
-   expect(page).to have_content(@pet_1.name)
+    expect(page).to have_content(@pet_1.name)
   end
 end
