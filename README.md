@@ -195,7 +195,7 @@ For example, if I search for "fluff", my search would match pets with names "flu
 ```
 
 ```
-[ ] done
+[ x] done
 
 Case Insensitive Matches for Pet Names
 
