@@ -10,7 +10,7 @@ class Application < ApplicationRecord
   validates :description, presence: true, allow_nil: true
 
   def set_in_progress
-    self.status = "In Progress" 
+    self.status = "In progress" 
   end
 
   def set_pending
