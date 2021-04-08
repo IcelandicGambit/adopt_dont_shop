@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   patch '/applications/:id/', to: 'applications#update'
   delete '/applications/:id', to: 'applications#destroy'
 
-  get 'admin/shelter'
+  get 'admin/shelters'
 
 end
 

@@ -36,4 +36,12 @@ class Shelter < ApplicationRecord
     select("shelters.*")
       .order("name DESC")
   end
+
+  def self.pending_shelter_apps
+    select("shelters.*")
+    .joins("INNER JOIN pets ON shelters.id = pets.shelter_id")
+    .joins("INNER JOIN pet_applications ON pets.id = pet_applications.pet_id")
+    .joins("INNER JOIN applications ON pet_applications.application_id = applications.id")
+    .where("applications.status = 'Pending'")
+  end
 end
