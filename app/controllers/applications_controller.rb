@@ -34,7 +34,7 @@ class ApplicationsController < ApplicationController
     @application = Application.find(params[:id])
     if params[:pet_id].present?
       @application.update(application_params)
-      @application.pet_applications.create(pet_id: params[:pet_id])
+      @application.pet_applications.create(pet_id: params[:pet_id]) #passing in pet id that user selects so that they can be joined upon update
     else
       if params[:description].blank?
         flash[:error] = "You must enter a description"
